@@ -1,0 +1,5 @@
+# 编译产物
+build/
+devel/
+
+compile_full.log

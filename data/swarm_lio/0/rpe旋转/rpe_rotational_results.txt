@@ -1,0 +1,35 @@
+--------------------------------------------------------------------------------
+Loaded 48774 stamps and poses from: groundtruth_quad0_tum.txt
+Loaded 1802 stamps and poses from: estimated_quad0_tum.txt
+--------------------------------------------------------------------------------
+Synchronizing trajectories...
+Found 1797 of max. 1802 possible matching timestamps between...
+	groundtruth_quad0_tum.txt
+and:	estimated_quad0_tum.txt
+..with max. time diff.: 0.01 (s) and time offset: 0.0 (s).
+--------------------------------------------------------------------------------
+Aligning using Umeyama's method...
+Rotation of alignment:
+[[ 0.99986654 -0.00991096  0.01298782]
+ [ 0.00963357  0.9997278   0.02124882]
+ [-0.01319488 -0.02112087  0.99968985]]
+Translation of alignment:
+[-0.17074973 -0.03880071  1.13034599]
+Scale correction: 1.0
+--------------------------------------------------------------------------------
+Found 1796 pairs with delta 1 (frames) among 1797 poses using consecutive pairs.
+Compared 1796 relative pose pairs, delta = 1 (frames) with consecutive pairs.
+Calculating RPE for rotation angle in degrees pose relation...
+--------------------------------------------------------------------------------
+RPE w.r.t. rotation angle in degrees (deg)
+for delta = 1 (frames) using consecutive pairs
+(with SE(3) Umeyama alignment)
+
+       max	1.596080
+      mean	0.193182
+    median	0.176684
+       min	0.006682
+      rmse	0.224878
+       sse	90.824106
+       std	0.115113
+

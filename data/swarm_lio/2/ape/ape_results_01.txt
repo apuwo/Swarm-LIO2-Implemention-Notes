@@ -1,0 +1,33 @@
+--------------------------------------------------------------------------------
+Loaded 48771 stamps and poses from: groundtruth_quad2_tum.txt
+Loaded 1279 stamps and poses from: estimated_quad2_tum.txt
+--------------------------------------------------------------------------------
+Synchronizing trajectories...
+Found 1279 of max. 1279 possible matching timestamps between...
+	groundtruth_quad2_tum.txt
+and:	estimated_quad2_tum.txt
+..with max. time diff.: 0.01 (s) and time offset: 0.0 (s).
+--------------------------------------------------------------------------------
+Aligning using Umeyama's method...
+Rotation of alignment:
+[[ 0.99987876  0.00456117 -0.01488815]
+ [-0.00447003  0.9999711   0.00614909]
+ [ 0.01491576 -0.00608179  0.99987026]]
+Translation of alignment:
+[-5.98908112e+00  3.91885454e-03  1.02548850e+00]
+Scale correction: 1.0
+--------------------------------------------------------------------------------
+Compared 1279 absolute pose pairs.
+Calculating APE for translation part pose relation...
+--------------------------------------------------------------------------------
+APE w.r.t. translation part (m)
+(with SE(3) Umeyama alignment)
+
+       max	0.095172
+      mean	0.024112
+    median	0.023366
+       min	0.002000
+      rmse	0.026174
+       sse	0.876183
+       std	0.010181
+
