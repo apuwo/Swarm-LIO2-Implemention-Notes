@@ -2,4 +2,4 @@
 build/
 devel/
 
-compile_full.log
+.compile_full.log

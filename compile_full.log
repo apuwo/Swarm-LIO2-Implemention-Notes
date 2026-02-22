@@ -1,0 +1,51 @@
+[  0%] Built target _swarm_msgs_generate_messages_check_deps_SpatialTemporalOffset
+[  0%] Built target nav_msgs_generate_messages_lisp
+[  0%] Built target _swarm_msgs_generate_messages_check_deps_ConnectedTeammateList
+[  0%] Built target _swarm_msgs_generate_messages_check_deps_TeammateInfo
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target _swarm_msgs_generate_messages_check_deps_SpatialTemporalOffsetStatus
+[  0%] Built target _swarm_msgs_generate_messages_check_deps_QuadStatePub
+[  0%] Built target _swarm_msgs_generate_messages_check_deps_GlobalExtrinsic
+[  0%] Built target _swarm_msgs_generate_messages_check_deps_GlobalExtrinsicStatus
+[  0%] Built target _swarm_msgs_generate_messages_check_deps_TeamStatus
+[  0%] Built target _swarm_msgs_generate_messages_check_deps_ObserveTeammate
+[ 12%] Built target swarm_msgs_generate_messages_lisp
+[ 12%] Built target std_msgs_generate_messages_nodejs
+[ 12%] Built target nav_msgs_generate_messages_nodejs
+[ 12%] Built target geometry_msgs_generate_messages_nodejs
+[ 24%] Built target swarm_msgs_generate_messages_nodejs
+[ 24%] Built target nav_msgs_generate_messages_eus
+[ 24%] Built target geometry_msgs_generate_messages_eus
+[ 24%] Built target std_msgs_generate_messages_eus
+[ 37%] Built target swarm_msgs_generate_messages_eus
+[ 37%] Built target std_msgs_generate_messages_py
+[ 37%] Built target nav_msgs_generate_messages_py
+[ 37%] Built target geometry_msgs_generate_messages_py
+[ 50%] Built target swarm_msgs_generate_messages_py
+[ 50%] Built target nav_msgs_generate_messages_cpp
+[ 50%] Built target std_msgs_generate_messages_cpp
+[ 50%] Built target geometry_msgs_generate_messages_cpp
+[ 62%] Built target swarm_msgs_generate_messages_cpp
+[ 62%] Built target swarm_msgs_generate_messages
+[ 62%] Built target _livox_ros_driver_generate_messages_check_deps_CustomPoint
+[ 62%] Built target _livox_ros_driver_generate_messages_check_deps_CustomMsg
+[ 65%] Built target livox_ros_driver_generate_messages_cpp
+[ 84%] Built target livox_ros_driver_node
+[ 88%] Built target livox_ros_driver_generate_messages_eus
+[ 92%] Built target livox_ros_driver_generate_messages_py
+[ 94%] Built target livox_ros_driver_generate_messages_nodejs
+[ 97%] Built target livox_ros_driver_generate_messages_lisp
+[ 97%] Built target livox_ros_driver_generate_messages
+[100%] Built target udp_online
+Base path: /home/apu/swarm_ws
+Source space: /home/apu/swarm_ws/src
+Build space: /home/apu/swarm_ws/build
+Devel space: /home/apu/swarm_ws/devel
+Install space: /home/apu/swarm_ws/install
+####
+#### Running command: "make cmake_check_build_system" in "/home/apu/swarm_ws/build"
+####
+####
+#### Running command: "make -j1" in "/home/apu/swarm_ws/build"
+####
