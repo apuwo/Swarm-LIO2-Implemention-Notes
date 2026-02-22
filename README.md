@@ -70,15 +70,15 @@ source devel/setup.bash
 ```
 
 #运行marsim
-
+```bash
 source devel/setup.bash
 roslaunch test_interface triple_drone_mid360.launch
-
+```
 #运行swarm-lio2仿真
-
+```bash
 source devel/setup.bash
 roslaunch swarm_lio simulation.launch
-
+```
 这里以三个无人机为例. 分别编写控制单无人机的python脚本  ,先让0号机启动 ,一段时间后可以看到0号无人机被队友识别到即rviz中出现绿框， 
 然后1号机2号机启动 可以看到所有无人机都被识别到了
 
@@ -97,52 +97,60 @@ swarm_lio_recorder_groundtruth.py
 
 #先记录再启动脚本
 # 启动MARSIM多机仿真环境（如三机）
+```bash
 roslaunch test_interface triple_drone_mid360.launch
-
+```
 # 启动Swarm-LIO2
+```bash
 source devel/setup.bash
 roslaunch swarm_lio simulation.launch
+```
 
-
+```bash
 python3 scripts/swarm_lio_recorder_groundtruth.py 
 python3 scripts/swarm_lio_recorder_estimated.py 
 
 python3 scripts/Lemniscate.py
 python3 scripts/Lemniscate1.py
 python3 scripts/Lemniscate2.py
-
+```
 
 #分别对比，以无人机0为例
 #全局⼀致性评估 (APE - Absolute Pose Error)
 评估整条轨迹与真值的重合程度，检查 SLAM 系统是否存在全局地图变形。
+```bash
 
 evo_ape tum groundtruth_quad0_tum.txt estimated_quad0_tum.txt  -va --plot  --save_plot ape_plot.pdf
 
 evo_ape tum groundtruth_quad0_tum.txt estimated_quad0_tum.txt -va --save_results ape_corridor_01.zip  #(保存为zip）
 
 evo_ape tum groundtruth_quad0_tum.txt estimated_quad0_tum.txt -va 2>&1 | tee ape_results_01.txt
-
+```
 
 #⾥程计漂移评估 (RPE - Relative Pose Error)
 #评估系统在局部运动中的精度，即 “ 每⾛⼀⽶或每过⼀秒产⽣的误差 ”
+```bash
 evo_rpe tum groundtruth_quad0_tum.txt estimated_quad0_tum.txt --plot 
 evo_rpe tum groundtruth_quad0_tum.txt estimated_quad0_tum.txt --plot        --save_results rpe_translational.zip 
 evo_rpe tum groundtruth_quad0_tum.txt estimated_quad0_tum.txt --plot        --save_plot rpe_translational_plot.pdf
-        
+ ```       
 # 将详细结果输出到文本文件
+```bash
 evo_rpe tum groundtruth_quad0_tum.txt estimated_quad0_tum.txt -va 2>&1 | tee rpe_translational_results.txt
 
-
+```
 
 # 评估旋转误差（角度制）并保存完整结果
+```bash
 evo_rpe tum groundtruth_quad0_tum.txt estimated_quad0_tum.txt -va --plot --pose_relation angle_deg \
         --save_results rpe_rotational.zip \
         --save_plot rpe_rotational_plot.pdf
-
+```
 # 将旋转误差详细结果输出到文本文件
+```bash
 evo_rpe tum groundtruth_quad0_tum.txt estimated_quad0_tum.txt -va --pose_relation angle_deg 2>&1 | tee    rpe_rotational_results.txt
 
-
+```
 无人机1与无人机2的操作类似
 
 
@@ -150,17 +158,20 @@ evo_rpe tum groundtruth_quad0_tum.txt estimated_quad0_tum.txt -va --pose_relatio
 
 使用evo_res命令生成表格
 对比ape
+```bash
 evo_res single_ape.zip multi0_ape.zip multi1_ape.zip multi2_ape.zip   --save_table benchmark_results.csv
-
+```
 
 对比rpe平移
+```bash
 evo_res single_rpe_translation.zip multi0_rpe_translational.zip multi1_rpe_translational.zip multi2_rpe_translational.zip   --save_table rpe_translation.csv
 
-
+```
 对比rpe旋转
+```bash
 
 evo_res single_rpe_rotational.zip multi0_rpe_rotational.zip multi1_rpe_rotational.zip multi2_rpe_rotational.zip   --save_table rpe_rotational.csv
-
+```
 #rosbag的操作不多赘述
  最后，得到的数据，文件，图片等均在data文件夹，分析与结论results
 
