@@ -1,5 +1,5 @@
-#总体环境
-本项目基于 Ubuntu 20.04 和 ROS Noetic 进行开发和测试.
+**总体环境：**
+ 本项目基于 Ubuntu 20.04 和 ROS Noetic 进行开发和测试.
 
 # swarm-lio2
 
